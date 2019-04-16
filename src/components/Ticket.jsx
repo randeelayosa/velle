@@ -2,13 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Ticket(props){
-  var myStyledComponentStyles = {
-    backgroundColor: '#ecf0f1',
-    fontFamily: 'sans-serif',
-    paddingTop: '50px'
-  }
+
   return (
-    <div style={myStyledComponentStyles}>
+    <div>
+      <style global jsx>{`
+      div {
+        background-color: pink;
+        text-align: center;
+      }
+      h3 {
+        color: white;
+      }
+      p:hover {
+        color: white;
+        cursor: pointer;
+      }
+    `}</style>
       <h3> {props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <hr/>
