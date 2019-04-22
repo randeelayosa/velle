@@ -20,6 +20,7 @@ function Ticket(props){
     `}</style>
       <h3> {props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
+      <p>{props.id}</p>
       <hr/>
     </div>
   )
@@ -29,6 +30,7 @@ Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   issue: PropTypes.string,
+  id: PropTypes.string,
 }
 
 export default Ticket
