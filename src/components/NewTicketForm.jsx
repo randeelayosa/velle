@@ -1,28 +1,22 @@
-import React from 'react';
-import patos from '../assets/images/patos.jpeg';
+import React from 'react'
+import patos from '../assets/images/patos.jpeg'
 
 function NewTicketForm(){
 
-  var styles = {
-      backgroundImage: 'linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))'
-  };
+  // var styles = {
+  //   backgroundImage: 'linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))'
+  // }
   return(
-    <div style={styles}>
-      <div>
-        <style jsx>{`
-            img {
-              width: 100%;
-              height: 25%;
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-              position: relative;
-            }
-                `}</style>
-        <img src={patos}/>
-      </div>
-      <form>
-        <style jsx>{`
+    <div>
+      <style jsx>{`
+          img {
+            width: 100%;
+            height: 25%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+          }
           form {
             text-align: center;
             position: absolute;
@@ -33,7 +27,11 @@ function NewTicketForm(){
             width: 100%;
             height:75%;
           }
-        `}</style>
+          `}</style>
+      <div>
+        <img src={patos}/>
+      </div>
+      <form>
         <input
           type='text'
           id='names'
@@ -48,7 +46,7 @@ function NewTicketForm(){
         <button type='submit'>Help!</button>
       </form>
     </div>
-  );
+  )
 }
 
-export default NewTicketForm;
+export default NewTicketForm
