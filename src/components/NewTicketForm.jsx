@@ -2,6 +2,20 @@ import React from 'react'
 import patos from '../assets/images/patos.jpeg'
 
 function NewTicketForm(){
+  let _names = null;
+  let _location = null;
+  let _issue = null;
+
+  function handleNewTicketFormSubmission(event) {
+    event.preventDefault();
+    console.log(_names.value);
+    console.log(_location.value);
+    console.log(_issue);
+    _names.value = '';
+    _location.value = '';
+    _issue.value = '';
+
+  }
 
   // var styles = {
   //   backgroundImage: 'linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))'
@@ -31,18 +45,21 @@ function NewTicketForm(){
       <div>
         <img src={patos}/>
       </div>
-      <form>
+      <form onSubmit={handleNewTicketFormSubmission}>
         <input
           type='text'
           id='names'
-          placeholder='Pair Names'/>
+          placeholder='Pair Names'
+          ref={(input) => {_names = input;}}/>
         <input
           type='text'
           id='location'
-          placeholder='Location'/>
+          placeholder='Location'
+          ref={(input) => {_location = input;}}/>
         <textarea
           id='issue'
-          placeholder='Describe your issue'/>
+          placeholder='Describe your issue'
+          ref={(textarea) => {_issue = textarea;}}/>
         <button type='submit'>Help!</button>
       </form>
     </div>
