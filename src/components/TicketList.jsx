@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 
 function TicketList(props){
-  console.log(props.ticketList);
+  console.log(props.ticketList)
   return (
     <div>
       <hr/>
@@ -12,7 +12,6 @@ function TicketList(props){
         <Ticket names={ticket.names}
           location={ticket.location}
           issue={ticket.issue}
-          id={ticket.id}
           key={ticket.id}/>
       )}
     </div>
