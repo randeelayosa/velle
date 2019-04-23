@@ -10,7 +10,7 @@ class App extends React.Component{
   constructor (props) {
     super(props)
     this.state = {
-      masterTicketList: [{names: 'Chris', location: 'R4', issue:'This is a placeholder issue'}]
+      masterTicketList: []
     }
     this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this)
   }
@@ -24,7 +24,7 @@ class App extends React.Component{
       <div>
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><TicketList ticketList={this.state.masterTicketList}/>}/>
+          <Route exact path='/' render={()=><TicketList ticketList={this.state.masterTicketList} />} />
           <Route path='/newticket' render={()=><NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList}/>}/>
           <Route component={Error404} />
         </Switch>
