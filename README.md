@@ -32,13 +32,13 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 ## Setup/Installation Requirements
 
 #### To open and view this project file:
-1. Or, clone this GitHub repository https://github.com/randeelayosa/velle.git to your Desktop.
+1. Clone this GitHub repository https://github.com/randeelayosa/velle.git to your Desktop.
   * Install git onto your computer if it isn't already.
-  * To clone the project down to your desktop, open your Terminal, and enter the following commands:
+  * Open your Terminal, and enter the following commands:
   ```
   cd desktop
-  git clone [paste link here]
-  cd [project folder name]
+  git clone https://github.com/randeelayosa/velle.git
+  cd velle
   atom .
   npm install
   npm run start
@@ -62,32 +62,52 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 | React | JS Library |
 | Webpack | bundles/compiles code |
 
+
 ### Components and Routes Layout
 
 <p align="center">
-  <img src="src/assets/img/#####.jpg" width="500" height="373" title="Velle Component and Route Structure">
+  <img src="src/assets/img/diagram.jpg" width="500" height="385" title="Velle Component and Route Structure">
 </p>
 
+### Sketches
+<p align="center">
+  <img src="src/assets/img/###.jpg" width="500" height="385" title="Sketches of page design layout">
+</p>
+
+### Wireframes
+<p align="center">
+  <img src="src/assets/img/###.jpg" width="500" height="385" title="Wireframes of design mockup">
+</p>
+
+### Prototyping
+<p align="center">
+  <img src="####" title="Prototype example of user navigating through the app">
+</p>
+
+
 ### Features Built and To Be Completed
-- [ ] Component for Navigation bar.
-- [ ] Component for list of support agencies.
-- [ ] Component for Login feature to access private information.
-- [ ] Component for agencies to maintain their Wish List.
-- [ ] Component for search feature to find drop off locations nearby.
-- [ ] Component for agencies to upload images and information of items that they received but have not given away and are willing to share/send to other agencies.
-- [ ] Component for sharing feature that allows agencies to view item lists of other agencies to see if they have a specific requested item.
-- [ ] Component for mailing label generator feature.
+- [ ] Navigation bar.
+- [ ] List of support agencies.
+- [ ] Login feature to access private information.
+- [ ] Agencies can maintain their Wish List.
+- [ ] Search feature to find drop off locations nearby.
+- [ ] Agencies can upload images and information of items that they received but have not given away and are willing to share/send to other agencies.
+- [ ] Sharing feature that allows agencies to view item lists of other agencies to see if they have a specific requested item.
+- [ ] Address label generator feature.
 - [ ] About Page
 - [ ] Contact Page
 - [ ] Page routing
 - [ ] Styling
 
 ### Commit History/Work Activity Log
-_Friday, May 3_
-* 8:00 - Clone down template repo and begin Readme
+_Friday, May 3 - Planning_
+* 8:00 - Clone down template repo and begin readme
 * 9:00 - Start planning out and creating sketches
-* 10:00 - Begin wireframing and prototyping
-* 1:00 - Update/change out README to reflect appropriate information.
+* 10:00 - Begin wireframing
+* 1:00 - Update/change out readme to reflect appropriate information.
+* 2:00 - Add component tree image to readme.
+* 3:00 - Research more about outreach programs in Portland, and if businesses that offer similar services to my app the exist.
+* 4:00 - Done for the day.
 
 ### Legal
 
