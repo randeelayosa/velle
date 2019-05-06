@@ -71,7 +71,7 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 
 ### Sketches
 <p align="center">
-  <img src="src/assets/img/###.jpg" width="500" height="385" title="Sketches of page design layout">
+  <img src="src/assets/img/sketch.jpeg" width="600" height="463" title="Sketches of page design layout">
 </p>
 
 ### Wireframes
