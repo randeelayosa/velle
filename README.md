@@ -71,12 +71,18 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 
 ### Sketches
 <p align="center">
-  <img src="src/assets/img/sketch.jpeg" width="600" height="463" title="Sketches of page design layout">
+  <img src="src/assets/img/sketch.jpeg" width="600" height="463" title="Sketch of page design layout">
 </p>
 
 ### Wireframes
+<p align="center">Home</p>
 <p align="center">
-  <img src="src/assets/img/###.jpg" width="500" height="385" title="Wireframes of design mockup">
+  <img src="src/assets/img/wireframe-home.jpg" width="300" height="240" title="Wireframe of home page design mockup">
+  <img src="src/assets/img/wireframe-home-2.jpg" width="300" height="240" title="Wireframe of home page design mockup">
+</p>
+<p align="center">Home</p>
+<p align="center">
+  <img src="src/assets/img/wireframe-about.jpg" width="300" height="240" title="Wireframe of home page design mockup">
 </p>
 
 ### Prototyping
