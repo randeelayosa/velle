@@ -115,6 +115,10 @@ _Friday, May 3 - Planning_
 * 3:00 - Research more about outreach programs in Portland, and if businesses that offer similar services to my app the exist.
 * 4:00 - Done for the day.
 
+_Friday, May 10 - Wireframing and Static Build_
+* 8:00 - Wireframing
+* 9:00 - Wireframing
+
 ### Legal
 
 *This software is licensed under MIT license.*
