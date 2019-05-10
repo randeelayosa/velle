@@ -63,6 +63,33 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 | Webpack | bundles/compiles code |
 
 
+### User Stories
+_Target Users_
+* General public
+* Charitable organizations
+* Outreach programs
+
+_User Stories_
+* As a community member, I want the guarantee that my clothes are being handed directly to a person in need.
+* As a community member, I want to be able to see a list of items in need.
+* As a charity/outreach, I want to be able to have and maintain a list of people in need, but have the names anonymous to the public.
+* As a charity/outreach, I want to be able to upload details about the person in need, their personal information.
+* As a charity/outreach, I want to be able to upload photos of items in our possession that we received but do not have a need for, yet can be handed off to another organization to use.
+
+### User Personas
+* **Jill**
+  * **Purpose**: Has unwanted clothes and does not want to donate it to Goodwill, or go the resell route.
+  * **Pain Points**: Unsure of where to look or how to go about giving away her clothes.
+  * **How we can serve**: Velle's main function serves the very basis of Jill's needs. It will make her search and eventual donation a smooth and easy process.
+* **YMCA**
+  * **Purpose**: Has a number of club members that need clothing and cannot afford to do so.
+  * **Pain Points**: There's no infrastructure in place to constantly take in donations or campaign for them in a way that follows guidelines and keeps the club members' anonymity.
+  * **How we can serve**: Velle allows organizations to create and keep a private login account to upload details of member information. The information will then show on the main site page without names shown, keeping client anonymity.
+* **Boys & Girls Club**
+  * **Purpose**: Has a particular item or size in need that hasn't been donated to them yet.
+  * **Pain Points**: Has no control over the items they will receive in donations from the community.
+  * **How we can serve**: With the private logins for organizations, they can also pass along items amongst themselves, much like a library book share system.
+
 ### Components and Routes Layout
 
 <p align="center">
@@ -119,6 +146,7 @@ _Friday, May 10 - Wireframing and Static Build_
 * 8:00 - Wireframing
 * 9:00 - Wireframing
 * 10:00 - Prototyping
+* 11:00 - User Stories
 
 ### Legal
 
