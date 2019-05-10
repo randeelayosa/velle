@@ -64,12 +64,12 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 
 
 ### User Stories
-_Target Users_
+**_Target Users_**
 * General public
 * Charitable organizations
 * Outreach programs
 
-_User Stories_
+**_User Stories_**
 * As a community member, I want the guarantee that my clothes are being handed directly to a person in need.
 * As a community member, I want to be able to see a list of items in need.
 * As a charity/outreach, I want to be able to have and maintain a list of people in need, but have the names anonymous to the public.
@@ -147,6 +147,9 @@ _Friday, May 10 - Wireframing and Static Build_
 * 9:00 - Wireframing
 * 10:00 - Prototyping
 * 11:00 - User Stories
+* 12:00 - Change file structure, create Nav component
+* 1:00 - Install redux-logger, convert things over to redux, troubleshoot
+* 4:30 - Done for the day.
 
 ### Legal
 

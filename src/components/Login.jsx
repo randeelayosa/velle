@@ -4,25 +4,26 @@ import TicketList from './TicketList'
 import TicketDetail from './TicketDetail'
 
 
-function Admin(props){
+function Login(props){
   let optionalSelectedTicketContent = null
   if (props.selectedTicket != null){
     optionalSelectedTicketContent =  <TicketDetail selectedTicket={props.selectedTicket[props.selectedTicket]} />;
   }
   return(
     <div>
-      <h2>Admin</h2>
+      <h2>Login</h2>
       {optionalSelectedTicketContent}
       <TicketDetail/>
       <TicketList ticketList={props.ticketList} currentRouterPath={props.currentRouterPath} onTicketSelection={props.onTicketSelection} />
+
     </div>
   )
 }
 
-Admin.propTypes = {
+Login.propTypes = {
   ticketList: PropTypes.array,
   currentRouterPath: PropTypes.string.isRequired,
   onTicketSelection: PropTypes.func.isRequired,
   selectedTicket: PropTypes.object
 }
-export default Admin
+export default Login

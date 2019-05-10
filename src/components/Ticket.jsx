@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 
 function Ticket(props){
-  const ticketInformation =
+  const clientInformation =
 
   function handleSavingSelectedTicket(ticketId){
     const { dispatch } = props;
@@ -22,16 +22,16 @@ function Ticket(props){
       <hr/>
     </div>
 
-  if(props.currentRouterPath === '/admin') {
+  if(props.currentRouterPath === '/login') {
     return (
       <div onClick={() => {handleSavingSelectedTicket(props.ticketId);}}>
-        {ticketInformation}
+        {clientInformation}
       </div>
     )
   } else {
     return (
       <div>
-        {ticketInformation}
+        {clientInformation}
       </div>
     )
   }
