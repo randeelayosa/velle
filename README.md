@@ -118,6 +118,7 @@ _Friday, May 3 - Planning_
 _Friday, May 10 - Wireframing and Static Build_
 * 8:00 - Wireframing
 * 9:00 - Wireframing
+* 10:00 - Prototyping
 
 ### Legal
 
