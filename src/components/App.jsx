@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from './Nav'
 import TicketList from './TicketList'
 import NewTicketControl from './NewTicketControl'
 import Error404 from './Error404'
@@ -19,7 +18,6 @@ class App extends React.Component {
   render(){
     return (
       <div className='container'>
-        <Nav />
         <Switch>
           <Route exact path='/'  render={()=><HomeBody />} />
           <Route path='/locate' render={()=><Locate />} />

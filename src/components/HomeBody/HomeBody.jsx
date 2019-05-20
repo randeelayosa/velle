@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from './../Nav';
 import Left from './Left';
 import Middle from './Middle';
 import Right from './Right';
@@ -22,7 +23,7 @@ function HomeBody(){
       <div className='box right'>
         <h1>facilitate facilitate facilitate facilitate facilitate facilitate facilitate</h1>
       </div>
-
+      <Nav/>
       <style jsx>{`
         .body-container{
           width: 100%;
