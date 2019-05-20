@@ -24,12 +24,14 @@ function Nav(){
           .velle{
             position: absolute;
             bottom: 0;
-            left: 3%;
+            left: 5%;
             z-index: 999;
           }
           h1{
             color: #284e60;
-            font-size: 12rem;
+            font-size: 13em;
+            font-family: house-script, sans-serif;
+            font-weight: 600;
           }
         `}</style>
       </div>
