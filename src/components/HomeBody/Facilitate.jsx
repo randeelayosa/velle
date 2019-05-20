@@ -12,7 +12,7 @@ function Facilitate(){
           height: 100%;
           position: absolute;
           z-index: 20;
-          -webkit-clip-path: polygon(86% 0, 100% 0%, 100% 100%, 27% 100%);
+          -webkit-clip-path: polygon(95% 0, 100% 0%, 100% 100%, 35% 100%);
           clip-path: polygon(95% 0, 100% 0%, 100% 100%, 35% 100%);
         }
       `}</style>
