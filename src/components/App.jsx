@@ -1,11 +1,11 @@
 import React from 'react'
-import TicketList from './TicketList'
-import NewTicketControl from './NewTicketControl'
 import Error404 from './Error404'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Moment from 'moment'
 import Login from './Login'
 import Locate from './Locate'
+import About from './About'
+import Contact from './Contact'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import HomeBody from './HomeBody/HomeBody';
@@ -21,11 +21,9 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/'  render={()=><HomeBody />} />
           <Route path='/locate' render={()=><Locate />} />
-          <Route path='/about' render={()=><NewTicketControl />} />
-          <Route path='/contact' render={()=><NewTicketForm />} />
-          <Route path='/login' render={(props)=><Login ticketList={this.props.masterTicketList} currentRouterPath={props.location.pathname}
-            onTicketSelection={this.handleChangingSelectedTicket}
-            selectedTicket={this.state.selectedTicket}/>} />
+          <Route path='/about' render={()=><About />} />
+          <Route path='/contact' render={()=><Contact />} />
+          <Route path='/login' render={(props)=><Login />} />
           <Route component={Error404} />
         </Switch>
 

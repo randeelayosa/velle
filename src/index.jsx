@@ -4,7 +4,6 @@ import App from './components/App'
 import { HashRouter } from 'react-router-dom'
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux'
-import ticketListReducer from './reducers/ticket-list-reducer'
 import rootReducer from './reducers/index'
 
 

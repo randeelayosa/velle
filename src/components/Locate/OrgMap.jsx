@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 
-export class Map extends Component {
-  state = ({
+export class Org extends React.Component {
+  state = {
     showingInfoWindow: false,
     activeMarker: {},
     selectedPlace: {}
-  });
+  };
 
   onMarkerClick = (props, marker, e) =>
     this.setState({
@@ -46,6 +46,6 @@ export class Map extends Component {
 }
 
   export default GoogleApiWrapper({
-    apiKey: ""
+    apiKey: 'AIzaSyArQ14C_D7hv9OX3pv3YJZ3PLI9x8AtWHI'
 
-  })(Map);
+  })(OrgMap);
