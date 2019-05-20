@@ -8,12 +8,13 @@ import Moment from 'moment'
 import Login from './Login'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import HomeBody from './HomeBody/HomeBody';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
   }
-  
+
   render(){
     return (
       <div className='container'>
@@ -25,8 +26,9 @@ class App extends React.Component {
             onTicketSelection={this.handleChangingSelectedTicket}
             selectedTicket={this.state.selectedTicket}/>} />
           <Route component={Error404} />
-
         </Switch>
+        <HomeBody/>
+
         <style jsx>{`
           .container{
             margin: 0;
