@@ -29,10 +29,15 @@ class App extends React.Component {
         </Switch>
         <HomeBody/>
 
-        <style jsx>{`
-          .container{
+        <style global jsx>{`
+          *{
             margin: 0;
             padding: 0;
+          }
+        `}</style>
+
+        <style jsx>{`
+          .container{
             width: 100%;
             height: 100vh;
             font-family: Arial, sans-serif;

@@ -7,9 +7,13 @@ function Facilitate(){
 
       <style jsx>{`
         .locate-container{
-          background-color: green;
-          width: 33%;
-          height: 90vh;
+          background-color: #f99b45;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 20;
+          -webkit-clip-path: polygon(86% 0, 100% 0%, 100% 100%, 27% 100%);
+          clip-path: polygon(95% 0, 100% 0%, 100% 100%, 35% 100%);
         }
       `}</style>
     </div>

@@ -7,9 +7,12 @@ function Donate(){
 
       <style jsx>{`
         .donate-container{
-          background-color: red;
-          width: 33%;
-          height: 90vh;
+          background-color: #d95980;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          -webkit-clip-path: polygon(0 0, 100% 0%, 44% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 44% 100%, 0 100%);
         }
       `}</style>
     </div>
