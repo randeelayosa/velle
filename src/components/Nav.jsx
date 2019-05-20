@@ -8,12 +8,16 @@ function Nav(){
         <Link style={{textDecoration: 'none'}} to="/"><h1>Velle</h1></Link>
       </div>
       <div className='links'>
-        <Link style={{textDecoration: 'none', color: '#284e60'}} to="/about">About</Link> | <Link style={{textDecoration: 'none', color: '#284e60'}} to="/contact">Contact</Link> | <Link style={{textDecoration: 'none', color: '#284e60'}} to="/login">Login</Link>
+        <div>
+          <Link style={{textDecoration: 'none', color: '#284e60'}} to="/about">About</Link><br/>
+          <Link style={{textDecoration: 'none', color: '#284e60'}} to="/contact">Contact</Link><br/>
+          <Link style={{textDecoration: 'none', color: '#284e60'}} to="/login">Login</Link>
+        </div>
       </div>
       <style jsx>{`
         .nav-container{
           width: 100vw;
-          height: auto;
+          height: 20%;
           position: fixed;
           bottom: 0;
           z-index: 999;
@@ -25,23 +29,31 @@ function Nav(){
         .velle{
           margin-left: 4%;
           border: 1px solid red;
+          width: auto;
+          height: 100%;
         }
         h1{
           color: #284e60;
           font-size: 13em;
           font-family: house-script, sans-serif;
           font-weight: 600;
+          height: auto;
         }
         .links{
-          border: 4px solid #284e60;
-          border: 1px solid red;
+          border-right: 9px solid #284e60;
           margin-right: 4%;
-          height: 100%;
-          width: auto;
+          padding-right: 1%;
+          width: 10%;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          font-size: 2rem;
+          line-height: 3rem;
+          text-align: right;
         }
       `}</style>
     </div>
   )
 }
 
-export default Nav
+export default Nav;

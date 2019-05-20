@@ -19,7 +19,7 @@ class App extends React.Component {
   render(){
     return (
       <div className='container'>
-        <Nav/>
+        <Nav />
         <Switch>
           <Route exact path='/'  render={()=><HomeBody />} />
           <Route path='/locate' render={()=><Locate />} />

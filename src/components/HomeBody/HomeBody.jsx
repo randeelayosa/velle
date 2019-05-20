@@ -10,9 +10,18 @@ import Right from './Right';
 function HomeBody(){
   return(
     <div className='body-container'>
-      <div className='box left'><h1>donate donate donate donate donate donate donate</h1></div>
-      <div className='box middle'><h1>locate locate locate locate locate locate locate</h1></div>
-      <div className='box right'><h1>facilitate facilitate facilitate facilitate facilitate facilitate facilitate</h1></div>
+      <div className='box left'>
+        <div className='left-container'>
+          <h1>donate donate donate donate donate donate donate</h1>
+          <p>can you see this?</p>
+        </div>
+      </div>
+      <div className='box middle'>
+        <h1>locate locate locate locate locate locate locate</h1>
+      </div>
+      <div className='box right'>
+        <h1>facilitate facilitate facilitate facilitate facilitate facilitate facilitate</h1>
+      </div>
 
       <style jsx>{`
         .body-container{
@@ -35,7 +44,10 @@ function HomeBody(){
           flex-grow: 1;
           flex-basis: 0;
           transition: flex-grow .2s;
-          transform: skew(-20deg, 0);
+        }
+        p{
+          color: #d95980;
+          border: 1px solid green;
         }
         .box.middle{
           background: #63aac0;
@@ -62,7 +74,7 @@ function HomeBody(){
           padding: 10%;
         }
         .right {
-          margin-right: -225px;
+          margin-right: -232px;
         }
         .box::before {
           content: '';
@@ -77,6 +89,16 @@ function HomeBody(){
         .box:hover {
           flex-grow: 5;
           transition: flex-grow .2s;
+        }
+        .box p:hover {
+          color: black;
+          cursor: pointer;
+        }
+        .left-container{
+          border: 1px solid green;
+          margin: 10%;
+          width: 100%;
+          height: 100%;
         }
       `}</style>
     </div>
