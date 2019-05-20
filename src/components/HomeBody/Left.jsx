@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-function Donate(){
+function Left(){
   return(
     <div className='donate-container'>
       <div className='donate-content'>
-        <h1>Donate</h1>
+        <Link to="/locate"><h1>Donate</h1></Link>
       </div>
 
       <style jsx>{`
@@ -37,4 +38,4 @@ function Donate(){
   )
 }
 
-export default Donate;
+export default Left;

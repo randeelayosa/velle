@@ -6,6 +6,7 @@ import Error404 from './Error404'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Moment from 'moment'
 import Login from './Login'
+import Locate from './Locate'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import HomeBody from './HomeBody/HomeBody';
@@ -20,14 +21,15 @@ class App extends React.Component {
       <div className='container'>
         <Nav/>
         <Switch>
-          <Route exact path='/' render={()=><TicketList ticketList={this.props.masterTicketList} />} />
-          <Route path='/newticket' render={()=><NewTicketControl />} />
+          <Route exact path='/'  render={()=><HomeBody />} />
+          <Route path='/locate' render={()=><Locate />} />
+          <Route path='/about' render={()=><NewTicketControl />} />
+          <Route path='/contact' render={()=><NewTicketForm />} />
           <Route path='/login' render={(props)=><Login ticketList={this.props.masterTicketList} currentRouterPath={props.location.pathname}
             onTicketSelection={this.handleChangingSelectedTicket}
             selectedTicket={this.state.selectedTicket}/>} />
           <Route component={Error404} />
         </Switch>
-        <HomeBody/>
 
         <style global jsx>{`
           *{
@@ -41,7 +43,6 @@ class App extends React.Component {
             width: 100%;
             height: 100vh;
             font-family: Arial, sans-serif;
-            border: 1px solid red;
           }
         `}</style>
       </div>

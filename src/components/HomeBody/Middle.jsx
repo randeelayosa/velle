@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Locate(){
+function Middle(){
   return(
     <div className='locate-container'>
       <h1>Locate</h1>
@@ -15,9 +15,12 @@ function Locate(){
           -webkit-clip-path: polygon(55% 0, 100% 0%, 100% 100%, -10% 100%);
           clip-path: polygon(55% 0, 100% 0%, 100% 100%, -10% 100%);
         }
+        h1{
+          text-align: right;
+        }
       `}</style>
     </div>
   )
 }
 
-export default Locate;
+export default Middle;

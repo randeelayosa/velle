@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Facilitate(){
+function Right(){
   return(
     <div className='locate-container'>
       <h1>Facilitate</h1>
@@ -15,9 +15,12 @@ function Facilitate(){
           -webkit-clip-path: polygon(95% 0, 100% 0%, 100% 100%, 35% 100%);
           clip-path: polygon(95% 0, 100% 0%, 100% 100%, 35% 100%);
         }
+        h1{
+          text-align: right;
+        }
       `}</style>
     </div>
   )
 }
 
-export default Facilitate;
+export default Right;
