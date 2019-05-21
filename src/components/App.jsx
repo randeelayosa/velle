@@ -3,7 +3,7 @@ import Error404 from './Error404'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Moment from 'moment'
 import Login from './Login'
-import Locate from './Locate'
+
 import About from './About'
 import Contact from './Contact'
 import { connect } from 'react-redux'
