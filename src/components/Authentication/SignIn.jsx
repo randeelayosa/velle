@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import NavConstant from '../Layout/NavConstant';
 
-class SignUp extends Component {
+class SignIn extends Component {
   constructor(props){
     super(props);
     this.state = {
       email: '',
-      password: '',
-      firstName: '',
-      lastName: ''
+      password: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,21 +38,12 @@ class SignUp extends Component {
             <input type='password' id='password' onChange={this.handleChange} />
           </div>
           <div className='input-field'>
-            <label htmlFor='firstName'>First Name</label>
-            <input type='text' id='firstName' onChange={this.handleChange} />
-          </div>
-          <div className='input-field'>
-            <label htmlFor='lastName'>Last Name</label>
-            <input type='text' id='lastName' onChange={this.handleChange} />
-          </div>
-          <div className='input-field'>
-            <button>Login</button>
+            <button>Sign Up</button>
           </div>
         </form>
       </div>
     )
   }
-
 }
 
-export default SignUp;
+export default SignIn;
