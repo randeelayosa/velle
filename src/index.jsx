@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
 import { HashRouter } from 'react-router-dom'
-import { createStore } from 'redux';
-import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import { combineReducers } from 'redux';
 import { authReducer } from './reducers/authReducer';
 import { wishlistReducer } from './reducers/wishlistReducer';
@@ -17,7 +18,7 @@ const rootReducer = combineReducers({
 });
 
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
   console.log('this is store', store);
 
   // let unsubscribe = store.subscribe(() =>

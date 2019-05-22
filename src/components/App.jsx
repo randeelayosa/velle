@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Moment from 'moment'
 import About from './About'
-import Contact from './Contact'
+import Contact from './Contact';
 import HomeBody from './HomeBody/HomeBody';
 import Dashboard from './Dashboard/Dashboard';
 import WishListDetails from './WishList/WishListDetails';

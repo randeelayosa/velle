@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import NavConstant from '../Layout/NavConstant';
+import { createList } from '../../actions/wishlistActions'
 
 class CreateWishList extends React.Component {
   constructor(props){
@@ -20,7 +22,7 @@ class CreateWishList extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log('state create list', this.state)
+    this.props.createList(this.state);
   }
 
   render(){
@@ -47,4 +49,10 @@ class CreateWishList extends React.Component {
 
 }
 
-export default CreateWishList;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createList: (wishlist) => dispatch(createList(wishlist))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateWishList);
