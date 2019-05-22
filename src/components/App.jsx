@@ -1,59 +1,53 @@
 import React from 'react'
 import Error404 from './Error404'
-import { Switch, Route, withRouter } from 'react-router-dom'
-import Moment from 'moment'
-import Login from './Login'
-
-import About from './About'
-import Contact from './Contact'
+import { HashRouter, Switch, Route, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import Moment from 'moment'
+import About from './About'
+import Contact from './Contact'
 import HomeBody from './HomeBody/HomeBody';
+import Dashboard from './Dashboard/Dashboard';
+import WishListDetails from './WishList/WishListDetails';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
-  render(){
-    return (
-      <div className='container'>
+function App() {
+  return (
+    <div className='container'>
+      <HashRouter>
         <Switch>
           <Route exact path='/'  render={()=><HomeBody />} />
           <Route path='/locate' render={()=><Locate />} />
           <Route path='/about' render={()=><About />} />
           <Route path='/contact' render={()=><Contact />} />
-          <Route path='/login' render={(props)=><Login />} />
+          <Route path='/dashboard' render={()=><Dashboard />} />
+          <Route path='/wishlist/:id' render={()=><WishListDetails />} />
           <Route component={Error404} />
         </Switch>
+      </HashRouter>
 
-        <style global jsx>{`
-          *{
-            margin: 0;
-            padding: 0;
-          }
-        `}</style>
+      <style global jsx>{`
+        *{
+          margin: 0;
+          padding: 0;
+        }
+      `}</style>
 
-        <style jsx>{`
-          .container{
-            width: 100%;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-          }
-        `}</style>
-      </div>
-    )
-  }
+      <style jsx>{`
+        .container{
+          width: 100%;
+          height: 100vh;
+          font-family: Arial, sans-serif;
+        }
+        NavConstant{
+          position: absolute;
+          z-index: 999;
+        }
+      `}</style>
+    </div>
+  )
 }
 
-App.propTypes = {
-  masterTicketList: PropTypes.object
-}
 
-const mapStateToProps = state => {
-  return {
-    masterTicketList: state.masterTicketList
-  };
-};
 
-export default withRouter(connect(mapStateToProps)(App))
+export default App;

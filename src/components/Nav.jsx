@@ -20,7 +20,7 @@ function Nav(){
           height: 20%;
           position: fixed;
           bottom: 0;
-          z-index: 999;
+          z-index: 998;
           display: flex;
           justify-content: space-between;
           align-items: center;

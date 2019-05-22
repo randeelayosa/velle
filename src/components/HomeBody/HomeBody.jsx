@@ -42,6 +42,8 @@ function HomeBody(){
           color: black;
           position: relative;
           overflow: hidden;
+          box-sizing: border-box;
+          padding: 2%;
           flex-grow: 1;
           flex-basis: 0;
           transition: flex-grow .2s;
@@ -97,9 +99,7 @@ function HomeBody(){
         }
         .left-container{
           border: 1px solid green;
-          margin: 10%;
           width: 100%;
-          height: 100%;
         }
       `}</style>
     </div>
