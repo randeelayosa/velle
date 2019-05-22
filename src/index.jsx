@@ -9,9 +9,11 @@ import { authReducer } from './reducers/authReducer';
 import { wishlistReducer } from './reducers/wishlistReducer';
 
 
+console.log('auth', authReducer)
+
 const rootReducer = combineReducers({
   auth: authReducer,
-  wishlist: wishlistReducer
+  list: wishlistReducer
 });
 
 

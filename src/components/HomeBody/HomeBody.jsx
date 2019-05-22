@@ -1,12 +1,5 @@
 import React from 'react';
 import Nav from './../Nav';
-import Left from './Left';
-import Middle from './Middle';
-import Right from './Right';
-
-// <Left/>
-// <Middle/>
-// <Right/>
 
 function HomeBody(){
   return(

@@ -19,6 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
+        <HashRouter>
           <Switch>
             <Route exact path='/'  render={()=><HomeBody />} />
             <Route path='/locate' render={()=><Locate />} />
@@ -31,6 +32,7 @@ class App extends Component {
             <Route path='/create' component={CreateWishList} />
             <Route component={Error404} />
           </Switch>
+        </HashRouter>
 
         <style global jsx>{`
           *{

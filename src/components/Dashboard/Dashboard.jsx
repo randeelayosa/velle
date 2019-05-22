@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import NavConstant from '../Layout/NavConstant';
 import Notifications from './Notifications'
 import WishList from '../WishList/WishList'
 
+
 class Dashboard extends Component {
   render(){
+    console.log('dashboard', this.props)
+    const { wishlist } = this.props;
+
     return(
       <div className='dashboard-container'>
         <NavConstant />
         <div className='dashboard-content'>
           <div className='col-list'>
-            <WishList />
+            <WishList wishlist={wishlist} />
           </div>
           <div className='notif-list'>
             <Notifications />
@@ -47,4 +52,10 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => {
+  return {
+    wishlist: state.list.wishlist
+  };
+}
+
+export default connect(mapStateToProps)(Dashboard);

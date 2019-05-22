@@ -1,13 +1,14 @@
 import React from 'react'
 import WishListSummary from './WishListSummary';
 
-const WishList = () => {
+const WishList = ({wishlist}) => {
   return (
     <div className='wish-list'>
-      <WishListSummary />
-      <WishListSummary />
-      <WishListSummary />
-      <WishListSummary />
+      { wishlist && wishlist.map(wishlist => {
+        return (
+          <WishListSummary wishlist={wishlist} key={wishlist.id} />
+        )
+      })}
     </div>
   )
 }

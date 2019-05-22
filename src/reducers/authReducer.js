@@ -1,7 +1,5 @@
 import { initialAuthState } from '../constants/initialState';
 
-const authReducer = (state = initialAuthState, action) => {
+export const authReducer = (state = initialAuthState) => {
   return state;
-}
-
-export default authReducer;
+};

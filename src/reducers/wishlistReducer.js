@@ -1,9 +1,6 @@
 import { initialListState } from '../constants/initialState';
 
-const initialState = {}
 
-const wishlistReducer = (state = initialState, action) => {
+export const wishlistReducer = (state = initialListState) => {
   return state;
-}
-
-export default wishlistReducer;
+};
