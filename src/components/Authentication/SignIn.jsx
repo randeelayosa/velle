@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
+import NavConstant from '../Layout/NavConstant';
 
 class SignIn extends React.Component {
-  state = {
-    email: '',
-    password: ''
+  constructor(props){
+    super(props);
+    this.state = {
+      email: '',
+      password: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e){
@@ -20,6 +26,7 @@ class SignIn extends React.Component {
   render(){
     return (
       <div>
+        <NavConstant />
         <form onSubmit={this.handleSubmit} className='signin-container'>
           <h2>Sign In</h2>
           <div className='input-field'>

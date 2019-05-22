@@ -9,6 +9,7 @@ import Contact from './Contact'
 import HomeBody from './HomeBody/HomeBody';
 import Dashboard from './Dashboard/Dashboard';
 import WishListDetails from './WishList/WishListDetails';
+import CreateWishList from './WishList/CreateWishList';
 import SignIn from './Authentication/SignIn';
 import SignUp from './Authentication/SignUp';
 
@@ -28,6 +29,7 @@ class App extends Component {
             <Route path='/wishlist/:id' component={WishListDetails} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
+            <Route path='/create' component={CreateWishList} />
             <Route component={Error404} />
           </Switch>
         </HashRouter>
