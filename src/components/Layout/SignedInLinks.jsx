@@ -1,15 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import NavConstant from './NavConstant';
 
 const SignedInLinks = () => {
   return(
     <div>
-      <NavConstant />
       <ul className='right'>
-        <li><NavLink to ='/create'>New List</NavLink></li>
+        <li><NavLink to ='/'>New List</NavLink></li>
         <li><NavLink to ='/'>Log Out</NavLink></li>
-        <li><NavLink to ='/dashboard' className='btn'>RL</NavLink></li>
+        <li><NavLink to ='/' className='btn'>RL</NavLink></li>
       </ul>
       <style jsx>{`
         .navbarHolder{

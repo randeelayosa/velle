@@ -1,4 +1,5 @@
 import React from 'react';
+import NavConstant from '../Layout/NavConstant';
 
 
 const WishListDetails = (props) => {
@@ -6,6 +7,7 @@ const WishListDetails = (props) => {
 
   return(
     <div className='wish-details-container'>
+      <NavConstant />
       <div className='card'>
         <div className='card-content'>
           <span className='card-title'>Wish - {id}</span>
