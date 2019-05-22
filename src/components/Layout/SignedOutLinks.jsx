@@ -5,8 +5,8 @@ const SignedOutLinks = () => {
   return(
     <div>
       <ul className='left'>
-        <li><NavLink to ='/'>Sign Up</NavLink></li>
-        <li><NavLink to ='/'>Login</NavLink></li>
+        <li><NavLink to ='/signup'>Sign Up</NavLink></li>
+        <li><NavLink to ='/signin'>Login</NavLink></li>
       </ul>
       <style jsx>{`
         .navbarHolder{
