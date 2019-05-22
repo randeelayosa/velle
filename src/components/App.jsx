@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Error404 from './Error404'
 import { HashRouter, Switch, Route, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -9,45 +9,50 @@ import Contact from './Contact'
 import HomeBody from './HomeBody/HomeBody';
 import Dashboard from './Dashboard/Dashboard';
 import WishListDetails from './WishList/WishListDetails';
+import SignIn from './Authentication/SignIn';
+import SignUp from './Authentication/SignUp';
 
 
-function App() {
-  return (
-    <div className='container'>
-      <HashRouter>
-        <Switch>
-          <Route exact path='/'  render={()=><HomeBody />} />
-          <Route path='/locate' render={()=><Locate />} />
-          <Route path='/about' render={()=><About />} />
-          <Route path='/contact' render={()=><Contact />} />
-          <Route path='/dashboard' render={()=><Dashboard />} />
-          <Route path='/wishlist/:id' render={()=><WishListDetails />} />
-          <Route component={Error404} />
-        </Switch>
-      </HashRouter>
+class App extends Component {
 
-      <style global jsx>{`
-        *{
-          margin: 0;
-          padding: 0;
-        }
-      `}</style>
+  render() {
+    return (
+      <div className='container'>
+        <HashRouter>
+          <Switch>
+            <Route exact path='/'  render={()=><HomeBody />} />
+            <Route path='/locate' render={()=><Locate />} />
+            <Route path='/about' render={()=><About />} />
+            <Route path='/contact' render={()=><Contact />} />
+            <Route path='/dashboard' component={Dashboard} />
+            <Route path='/wishlist/:id' component={WishListDetails} />
+            <Route path='/signin' component={SignIn} />
+            <Route path='/signup' component={SignUp} />
+            <Route component={Error404} />
+          </Switch>
+        </HashRouter>
 
-      <style jsx>{`
-        .container{
-          width: 100%;
-          height: 100vh;
-          font-family: Arial, sans-serif;
-        }
-        NavConstant{
-          position: absolute;
-          z-index: 999;
-        }
-      `}</style>
-    </div>
-  )
+        <style global jsx>{`
+          *{
+            margin: 0;
+            padding: 0;
+          }
+        `}</style>
+
+        <style jsx>{`
+          .container{
+            width: 100%;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+          }
+          NavConstant{
+            position: absolute;
+            z-index: 999;
+          }
+        `}</style>
+      </div>
+    )
+  }
 }
-
-
 
 export default App;
