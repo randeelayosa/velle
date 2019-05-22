@@ -4,7 +4,15 @@ import App from './components/App'
 import { HashRouter } from 'react-router-dom'
 import { createStore } from 'redux';
 import { Provider } from 'react-redux'
-import rootReducer from './reducers/index'
+import { combineReducers } from 'redux';
+import { authReducer } from './reducers/authReducer';
+import { wishlistReducer } from './reducers/wishlistReducer';
+
+
+const rootReducer = combineReducers({
+  auth: authReducer,
+  wishlist: wishlistReducer
+});
 
 
 const store = createStore(rootReducer);
