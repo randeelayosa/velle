@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 import NavConstant from '../Layout/NavConstant';
-import Notifications from './Notifications'
-import WishList from '../WishList/WishList'
+import Notifications from './Notifications';
+import WishList from '../WishList/WishList';
 
 
 class Dashboard extends Component {
@@ -53,9 +55,15 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log('mapstate dashboard', state)
   return {
-    wishlist: state.list.wishlist
+    wishlist: state.firestore.ordered.wishlists
   };
 }
 
-export default connect(mapStateToProps)(Dashboard);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { collection: 'wishlists' }
+  ])
+)(Dashboard);
