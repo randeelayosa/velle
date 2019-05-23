@@ -1,25 +1,51 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 import NavConstant from '../Layout/NavConstant';
 
 
 const WishListDetails = (props) => {
-  const id = props.match.params.id;
-
-  return(
-    <div className='wish-details-container'>
-      <NavConstant />
-      <div className='card'>
-        <div className='card-content'>
-          <span className='card-title'>Wish - {id}</span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div className='card-action'>
-          <div>Posted by also me</div>
-          <div>December</div>
+  const { wishlist } = props;
+  if(wishlist) {
+    return(
+      <div className='wish-details-container'>
+        <NavConstant />
+        <div className='card'>
+          <div className='card-content'>
+            <span className='card-title'>{ wishlist.title }</span>
+            <p>{ wishlist.content }</p>
+          </div>
+          <div className='card-action'>
+            <div>Posted by { wishlist.age}</div>
+            <div>December</div>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return(
+      <div>
+        <p>Loading wishlist...</p>
+      </div>
+    )
+  }
+
 }
 
-export default WishListDetails;
+const mapStateToProps = (state, myProps) => {
+  // console.log('myProps', state);
+  const id = myProps.match.params.id;
+  const wishlists = state.firestore.data.wishlists;
+  const wishlist = wishlists ? wishlists[id] : null;
+  return {
+    wishlist: wishlist
+  }
+}
+
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { collection: 'wishlists' }
+  ])
+)(WishListDetails);
