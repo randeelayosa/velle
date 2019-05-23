@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signIn } from '../../actions/authActions';
 import NavConstant from '../Layout/NavConstant';
+import { Redirect } from 'react-router-dom';
 
 class SignIn extends Component {
   constructor(props){
@@ -26,7 +27,9 @@ class SignIn extends Component {
   }
 
   render(){
-    const { authError } = this. props;
+    const { authError, auth } = this. props;
+    if(auth.uid) return <Redirect to='/dashboard' />
+
     return (
       <div>
         <NavConstant />
@@ -54,7 +57,8 @@ class SignIn extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    authError: state.auth.authError
+    authError: state.auth.authError,
+    auth: state.firebase.auth
   }
 }
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import NavConstant from '../Layout/NavConstant';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class SignUp extends Component {
   constructor(props){
@@ -26,6 +28,9 @@ class SignUp extends Component {
   }
 
   render(){
+    const { auth } = this. props;
+    if(auth.uid) return <Redirect to='/dashboard' />
+
     return (
       <div>
         <NavConstant />
@@ -54,7 +59,12 @@ class SignUp extends Component {
       </div>
     )
   }
-
 }
 
-export default SignUp;
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
+export default connect(mapStateToProps)(SignUp);

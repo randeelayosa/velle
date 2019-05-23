@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import NavConstant from '../Layout/NavConstant';
-import { createList } from '../../actions/wishlistActions'
+import { createList } from '../../actions/wishlistActions';
+import { Redirect } from 'react-router-dom';
 
 class CreateWishList extends React.Component {
   constructor(props){
@@ -26,6 +27,9 @@ class CreateWishList extends React.Component {
   }
 
   render(){
+    const { auth } = this.props;
+    if(!auth.uid) return <Redirect to='/signin' />
+
     return (
       <div>
         <NavConstant />
@@ -49,10 +53,16 @@ class CreateWishList extends React.Component {
 
 }
 
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     createList: (wishlist) => dispatch(createList(wishlist))
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateWishList);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateWishList);

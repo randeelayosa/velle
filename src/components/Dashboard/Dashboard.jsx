@@ -5,13 +5,14 @@ import { compose } from 'redux';
 import NavConstant from '../Layout/NavConstant';
 import Notifications from './Notifications';
 import WishList from '../WishList/WishList';
+import { Redirect } from 'react-router-dom';
 
 
 class Dashboard extends Component {
   render(){
-    console.log('dashboard', this.props)
-    const { wishlist } = this.props;
-
+    // console.log('dashboard', this.props)
+    const { wishlist, auth } = this.props;
+    if(!auth.uid) return <Redirect to='/signin' />
     return(
       <div className='dashboard-container'>
         <NavConstant />
@@ -55,9 +56,9 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('mapstate dashboard', state)
   return {
-    wishlist: state.firestore.ordered.wishlists
+    wishlist: state.firestore.ordered.wishlists,
+    auth: state.firebase.auth
   };
 }
 

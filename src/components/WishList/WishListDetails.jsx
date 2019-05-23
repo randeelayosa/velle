@@ -3,10 +3,13 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import NavConstant from '../Layout/NavConstant';
+import { Redirect } from 'react-router-dom';
 
 
 const WishListDetails = (props) => {
-  const { wishlist } = props;
+  const { wishlist, auth } = props;
+  if(!auth.uid) return <Redirect to='/signin' />
+
   if(wishlist) {
     return(
       <div className='wish-details-container'>
@@ -39,7 +42,8 @@ const mapStateToProps = (state, myProps) => {
   const wishlists = state.firestore.data.wishlists;
   const wishlist = wishlists ? wishlists[id] : null;
   return {
-    wishlist: wishlist
+    wishlist: wishlist,
+    auth: state.firebase.auth
   }
 }
 
