@@ -24,6 +24,8 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 
   * _React_
   * _Redux_
+  * _Firebase_
+  * _Firestore_
   * _Webpack_
   * _eslint_
   * _SASS_
@@ -119,9 +121,9 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 
 
 ### Features Built and To Be Completed
-- [ ] Navigation bar.
+- [x] Navigation bar.
 - [ ] List of support agencies.
-- [ ] Login feature to access private information.
+- [x] Login feature to access private information.
 - [ ] Agencies can maintain their Wish List.
 - [ ] Search feature to find drop off locations nearby.
 - [ ] Agencies can upload images and information of items that they received but have not given away and are willing to share/send to other agencies.
@@ -129,8 +131,8 @@ _Velle is a pseudo company/organization that operates as a middle man between va
 - [ ] Address label generator feature.
 - [ ] About Page
 - [ ] Contact Page
-- [ ] Page routing
-- [ ] Styling
+- [x] Page routing
+- [x] Styling
 
 ### Commit History/Work Activity Log
 _Friday, May 3 - Planning_
