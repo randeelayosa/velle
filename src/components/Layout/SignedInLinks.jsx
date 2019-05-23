@@ -6,22 +6,18 @@ import { signOut } from '../../actions/authActions';
 const SignedInLinks = (props) => {
   return(
     <div>
-      <ul className='right'>
-        <li><NavLink to ='/create'>New List</NavLink></li>
-        <li><a onClick={props.signOut}>Log Out</a></li>
-        <li><NavLink to ='/dashboard' className='btn'>RL</NavLink></li>
-      </ul>
+      <div className='right'>
+        <div><NavLink to ='/create' style={{textDecoration: 'none', color: 'black'}}>New List</NavLink></div>
+        <div><a onClick={props.signOut}>Log Out</a></div>
+        <div><NavLink to ='/dashboard' className='btn' style={{textDecoration: 'none', color: 'black'}}>Dashboard</NavLink></div>
+      </div>
       <style jsx>{`
-        .navbarHolder{
-          background-color: darkgray;
-        }
-        ul{
+        .right{
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
-        }
-        li{
-          list-style-type: none;
+          justify-content: space-between;
+          width: 100%;
+          height: 100%;
         }
       `}</style>
     </div>

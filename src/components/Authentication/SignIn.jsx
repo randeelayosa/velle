@@ -31,17 +31,16 @@ class SignIn extends Component {
     if(auth.uid) return <Redirect to='/dashboard' />
 
     return (
-      <div>
+      <div className='signin-container'>
+        <div className='skew-div'></div>
         <NavConstant />
         <form onSubmit={this.handleSubmit} className='signin-container'>
-          <h2>Sign In</h2>
+          <h1>Sign In</h1>
           <div className='input-field'>
-            <label htmlFor='email'>Email</label>
-            <input type='email' id='email' onChange={this.handleChange} />
+            <input placeholder='Email' type='email' id='email' onChange={this.handleChange} />
           </div>
           <div className='input-field'>
-            <label htmlFor='password'>Password</label>
-            <input type='password' id='password' onChange={this.handleChange} />
+            <input placeholder='Password' type='password' id='password' onChange={this.handleChange} />
           </div>
           <div className='input-field'>
             <button>Login</button>
@@ -50,6 +49,36 @@ class SignIn extends Component {
             </div>
           </div>
         </form>
+
+        <style jsx>{`
+          .signin-container{
+            width: 100%;
+            height: 98vh;
+          }
+          form{
+            width: 50%;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 5%;
+          }
+          .skew-div{
+            width: 90%;
+            height: 100vh;
+            background-color: #f99b45;
+            transform: skew(-25deg, 0);
+            position: absolute;
+            z-index: -1;
+          }
+          h1{
+            color: #af5e11;
+            font-size: 6em;
+            font-family: house-script, sans-serif;
+            font-weight: 600;
+            height: auto;
+          }
+        `}</style>
       </div>
     )
   }

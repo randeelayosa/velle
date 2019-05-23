@@ -8,6 +8,15 @@ import WishList from '../WishList/WishList';
 import { Redirect } from 'react-router-dom';
 
 
+// <Notifications />
+
+// .notif-list{
+//   border: 1px solid green;
+//   grid-row: 1;
+//   grid-column: 2/3;
+// }
+
+
 class Dashboard extends Component {
   render(){
     // console.log('dashboard', this.props)
@@ -15,39 +24,51 @@ class Dashboard extends Component {
     if(!auth.uid) return <Redirect to='/signin' />
     return(
       <div className='dashboard-container'>
+        <div className='skew-div'></div>
         <NavConstant />
         <div className='dashboard-content'>
-          <div className='col-list'>
+          <div className='listed-wishes'>
             <WishList wishlist={wishlist} />
           </div>
           <div className='notif-list'>
-            <Notifications />
           </div>
+          <h1>Community Wish List</h1>
         </div>
         <style jsx>{`
-          .navbarHolder{
-            background-color: darkgray;
+          .dashboard-container{
+            width: 100%;
+            height: 98vh;
           }
           .dashboard-content{
-            display: grid;
             grid-template-rows: 1fr;
             grid-template-columns: 1fr 1fr;
-            width: 70%;
-            height: 50vh;
-            border: 1px solid red;
+            width: 100%;
+            height: 98vh;
           }
-          .col-list{
-            border: 1px solid blue;
+          .listed-wishes{
             grid-row: 1;
             grid-column: 1/2;
+            display: flex;
+            justify-content: center;
           }
-          .notif-list{
-            border: 1px solid green;
-            grid-row: 1;
-            grid-column: 2/3;
+          h1{
+            font-family: house-script, sans-serif;
+            font-size: 6rem;
+            color: #af5e11;
+            position: absolute;
+            bottom: 2%;
+            left: 2%;
           }
           li{
             list-style-type: none;
+          }
+          .skew-div{
+            width: 90%;
+            height: 100vh;
+            background-color: #f99b45;
+            transform: skew(-25deg, 0);
+            position: absolute;
+            z-index: -1;
           }
         `}</style>
       </div>

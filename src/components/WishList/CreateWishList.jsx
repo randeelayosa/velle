@@ -34,19 +34,39 @@ class CreateWishList extends React.Component {
       <div>
         <NavConstant />
         <form onSubmit={this.handleSubmit} className='signin-container'>
-          <h2>Create Wish List</h2>
-          <div className='input-field'>
-            <label htmlFor='title'>Title</label>
-            <input type='text' id='title' onChange={this.handleChange} />
-          </div>
-          <div className='input-field'>
-            <label htmlFor='content'>Wish Content</label>
-            <textarea id='content'  onChange={this.handleChange}></textarea>
-          </div>
-          <div className='input-field'>
-            <button>Create</button>
+          <div className='create-form'>
+            <h1>Create Wish List</h1>
+            <div className='input-field'>
+              <input type='text' id='title' onChange={this.handleChange} />
+            </div>
+            <div className='input-field'>
+              <textarea id='content' onChange={this.handleChange}></textarea>
+            </div>
+            <div className='input-field'>
+              <button>Create</button>
+            </div>
           </div>
         </form>
+
+        <style jsx>{`
+          form{
+            width: 90%;
+            height: 100vh;
+            background-color: #63aac0;
+            transform: skew(-25deg, 0);
+            display: flex;
+            justify-content: center;
+            padding-top: 15%;
+          }
+          .create-form{
+            transform: skew(25deg, 0);
+          }
+          h1{
+            font-family: house-script, sans-serif;
+            font-size: 6rem;
+            color: #284e60;
+          }
+        `}</style>
       </div>
     )
   }

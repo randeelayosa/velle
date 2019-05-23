@@ -12,6 +12,12 @@ const WishList = ({wishlist}) => {
           </Link>
         )
       })}
+
+      <style jsx>{`
+        .wish-list{
+          width: 500px;
+        }
+      `}</style>
     </div>
   )
 }

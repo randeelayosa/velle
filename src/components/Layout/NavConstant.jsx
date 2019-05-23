@@ -12,12 +12,24 @@ const NavConstant = (props) => {
     <div className='navbarHolder'>
       <div className='navbarContainer'>
         <Link to='/' className='brand-logo'>Velle</Link>
-        { links }
+        <Link to='/create'>Add Items</Link>
+        <div className='nav-links'>{ links }</div>
       </div>
 
       <style jsx>{`
         .navbarHolder{
-          background-color: darkgray;
+          background-color: white;
+          border-bottom: 3px solid #284e60;
+          height: 100px;
+        }
+        .navbarContainer{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+        }
+        .nav-links{
         }
       `}</style>
     </div>

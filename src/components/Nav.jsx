@@ -5,13 +5,13 @@ function Nav(){
   return (
     <div className='nav-container'>
       <div className='velle'>
-        <Link style={{textDecoration: 'none'}} to="/"><h1>Velle</h1></Link>
+        <Link style={{textDecoration: 'none'}} to="/dashboard"><h1>Velle</h1></Link>
       </div>
       <div className='links'>
         <div>
           <Link style={{textDecoration: 'none', color: '#284e60'}} to="/about">About</Link><br/>
           <Link style={{textDecoration: 'none', color: '#284e60'}} to="/contact">Contact</Link><br/>
-          <Link style={{textDecoration: 'none', color: '#284e60'}} to="/login">Login</Link>
+          <Link style={{textDecoration: 'none', color: '#284e60'}} to="/signin">Login</Link>
         </div>
       </div>
       <style jsx>{`
@@ -24,11 +24,9 @@ function Nav(){
           display: flex;
           justify-content: space-between;
           align-items: center;
-          border: 1px solid red;
         }
         .velle{
           margin-left: 4%;
-          border: 1px solid red;
           width: auto;
           height: 100%;
         }

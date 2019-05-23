@@ -6,15 +6,17 @@ function HomeBody(){
     <div className='body-container'>
       <div className='box left'>
         <div className='left-container'>
-          <h1>donate donate donate donate donate donate donate</h1>
-          <p>can you see this?</p>
+          <h1 className='donate'>Donate</h1>
+          <p className='p p1'>Generate a shipping label</p>
         </div>
       </div>
       <div className='box middle'>
-        <h1>locate locate locate locate locate locate locate</h1>
+        <h1 className='locate'>Locate</h1>
+        <p className='p p2'>Where we operate and who participates</p>
       </div>
       <div className='box right'>
-        <h1>facilitate facilitate facilitate facilitate facilitate facilitate facilitate</h1>
+        <h1 className='facilitate'>Facilitate</h1>
+        <p className='p p3'>Who we are and how it works</p>
       </div>
       <Nav/>
       <style jsx>{`
@@ -40,10 +42,6 @@ function HomeBody(){
           flex-grow: 1;
           flex-basis: 0;
           transition: flex-grow .2s;
-        }
-        p{
-          color: #d95980;
-          border: 1px solid green;
         }
         .box.middle{
           background: #63aac0;
@@ -86,13 +84,41 @@ function HomeBody(){
           flex-grow: 5;
           transition: flex-grow .2s;
         }
-        .box p:hover {
-          color: black;
-          cursor: pointer;
-        }
         .left-container{
-          border: 1px solid green;
           width: 100%;
+          margin-top: 50%;
+        }
+        .donate{
+          font-size: 3em;
+          color: #7c2741;
+        }
+        .locate{
+          transform: skew(20deg, 0);
+          font-size: 3em;
+          color: #284e60;
+        }
+        .facilitate{
+          transform: skew(20deg, 0);
+          font-size: 3em;
+          color: #af5e11;
+          margin: 23% 0 0 10%;
+        }
+        .p1{
+          color: #7c2741;
+          font-size: 1.5em;
+          margin: 40% 0 0 0;
+        }
+        .p2{
+          transform: skew(20deg, 0);
+          color: #284e60;
+          font-size: 1.5em;
+          margin: 30% 0 0 0;
+        }
+        .p3{
+          transform: skew(20deg, 0);
+          color: #af5e11;
+          font-size: 1.5em;
+          margin: 23% 0 0 10%;
         }
       `}</style>
     </div>
