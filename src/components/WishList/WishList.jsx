@@ -7,8 +7,8 @@ const WishList = ({wishlist}) => {
     <div className='wish-list'>
       { wishlist && wishlist.map(wishlist => {
         return (
-          <Link to={'/wishlist/' + wishlist.id}>
-            <WishListSummary wishlist={wishlist} key={wishlist.id} />
+          <Link to={'/wishlist/' + wishlist.id} key={wishlist.id}>
+            <WishListSummary wishlist={wishlist} />
           </Link>
         )
       })}

@@ -12,6 +12,7 @@ import { combineReducers } from 'redux';
 import { authReducer } from './reducers/authReducer';
 import { wishlistReducer } from './reducers/wishlistReducer';
 import { firestoreReducer } from 'redux-firestore';
+import { firebaseReducer } from 'react-redux-firebase';
 
 
 console.log('auth', authReducer)
@@ -19,7 +20,8 @@ console.log('auth', authReducer)
 const rootReducer = combineReducers({
   auth: authReducer,
   list: wishlistReducer,
-  firestore: firestoreReducer
+  firestore: firestoreReducer,
+  firebase: firebaseReducer
 });
 
 

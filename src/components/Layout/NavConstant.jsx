@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
+import { connect } from 'react-redux'
 
 const NavConstant = () => {
   return(
@@ -11,6 +12,7 @@ const NavConstant = () => {
         <SignedInLinks/>
         <SignedOutLinks/>
       </div>
+
       <style jsx>{`
         .navbarHolder{
           background-color: darkgray;
@@ -20,4 +22,11 @@ const NavConstant = () => {
   )
 }
 
-export default NavConstant;
+const mapStateToProps = (state) => {
+  console.log('mapStateToProps nav', state);
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps)(NavConstant);
