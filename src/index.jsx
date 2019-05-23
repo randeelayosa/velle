@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App'
+import App from './components/App';
+import { reduxFirestore, getFirestore } from 'redux-firestore';
+import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
+import fbConfig from './config/fbConfig';
 import { HashRouter } from 'react-router-dom'
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { combineReducers } from 'redux';
@@ -18,7 +21,13 @@ const rootReducer = combineReducers({
 });
 
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer,
+  compose(
+    applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
+    reduxFirestore(fbConfig),
+    reactReduxFirebase(fbConfig)
+  )
+);
   console.log('this is store', store);
 
   // let unsubscribe = store.subscribe(() =>
