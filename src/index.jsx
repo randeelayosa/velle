@@ -29,28 +29,26 @@ const store = createStore(rootReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
     reduxFirestore(fbConfig),
-    reactReduxFirebase(fbConfig)
+    reactReduxFirebase(fbConfig, {attachAuthIsReady: true})
   )
 );
+
+store.firebaseAuthIsReady.then(() => {
+  const render = (Component) => {
+    ReactDOM.render(
+      <HashRouter>
+        <Provider store={store}>
+          <Component/>
+        </Provider>
+      </HashRouter>,
+      document.getElementById('react-app-root')
+    );
+  };
+  render(App);
+})
   console.log('this is store', store);
 
-  // let unsubscribe = store.subscribe(() =>
-  //   console.log('state', store.getState())
-  // )
 
-
-const render = (Component) => {
-  ReactDOM.render(
-    <HashRouter>
-      <Provider store={store}>
-        <Component/>
-      </Provider>
-    </HashRouter>,
-    document.getElementById('react-app-root')
-  )
-}
-
-render(App)
 
 /*eslint-disable */
 if (module.hot) {
